@@ -11,6 +11,8 @@ import * as mainprocessmodule from "./mainprocessmodule.js";
 
 import * as startupmodule from "./startupmodule.js";
 
-Modules = {cliargumentsmodule, configmodule, debugmodule, mainprocessmodule, startupmodule};
+import * as statemodule from "./statemodule.js";
+
+Modules = {cliargumentsmodule, configmodule, debugmodule, mainprocessmodule, startupmodule, statemodule};
 
 export default Modules;

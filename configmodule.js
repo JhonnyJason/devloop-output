@@ -4,5 +4,7 @@ export var cli = {
   version: "0.0.1"
 };
 
+export var maxCycles = 10;
+
 // TODO read local config
 //     The
