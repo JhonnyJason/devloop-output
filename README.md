@@ -1,5 +1,34 @@
+# noname - 
+
+# Background
+
+# Usage
+Requirements
+------------
+
+Installation
+------------
+
+
+CLI
+-----
+
+
+Current Functionality
+---------------------
+
+
+---
+
+# Further steps
+
+- ...
+
+
+All sorts of inputs are welcome, thanks!
+
 
 ---
 
 # License
-[CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+[Unlicense JhonnyJason style](https://hackmd.io/nCpLO3gxRlSmKVG3Zxy2hA?view)
