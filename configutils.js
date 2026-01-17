@@ -72,12 +72,27 @@ export var readLocalConfig = async function() {
 };
 
 //#############################################################################
-export var updateLocalConfig = function(content) {
+export var updateLocalConfig = async function(content, validProps) {
+  var lbl, updated, val;
   log("updateLocalConfig");
+  validProps = new Set(validProps);
+  updated = [];
+  for (lbl in content) {
+    val = content[lbl];
+    if (validProps.has(lbl)) {
+      if (localConfig.content[lbl] !== val) {
+        localConfig.content[lbl] = val;
+        updated.push(lbl);
+      }
+    }
+  }
+  if (updated.length > 0) {
+    await saveConfig();
+  }
+  return updated;
 };
 
 //#############################################################################
-//# TODO implement
 createNewConfig = async function() {
   var confirmPw, keyFragment, publicKeyHex, pwd, secretKeyHex;
   log("createNewConfig");
