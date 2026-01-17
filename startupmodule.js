@@ -13,6 +13,8 @@ import * as mp from "./mainprocessmodule.js";
 
 import * as ca from "./cliargumentsmodule.js";
 
+import * as pth from "./pathmodule.js";
+
 //endregion
 
 //#############################################################################
@@ -21,6 +23,7 @@ export var cliStartup = async function() {
   log("cliStartup");
   try {
     e = ca.extractArguments();
+    pth.setWorkingDirectory(e.wd);
     await mp.execute(e);
     log("gracefully terminated!");
   } catch (error) {

@@ -10,15 +10,27 @@ importers:
     dependencies:
       '@anthropic-ai/claude-agent-sdk':
         specifier: ^0.2.7
-        version: 0.2.7(zod@4.3.5)
+        version: 0.2.11(zod@4.3.5)
+      enquirer:
+        specifier: ^2.4.1
+        version: 2.4.1
       meow:
         specifier: ^10.1.2
         version: 10.1.5
+      secret-manager-crypto-utils:
+        specifier: ^0.3.1
+        version: 0.3.1
+      thingy-byte-utils:
+        specifier: ^0.0.8
+        version: 0.0.8
+      thingy-crypto-node:
+        specifier: ^0.0.2
+        version: 0.0.2
 
 packages:
 
-  '@anthropic-ai/claude-agent-sdk@0.2.7':
-    resolution: {integrity: sha512-I1/zcnLah74kZeRkj/1QnDaC6ItJ2m/Bftlm25uoaRkZx7i7SkcpqM9jGE/r2A8PMxnw5WpabP60Xgj99CrTuw==}
+  '@anthropic-ai/claude-agent-sdk@0.2.11':
+    resolution: {integrity: sha512-50q4vfh57HYTUrwukULp3gvSaOZfRF5zukxhWvW6mmUHuD8+Xwhqn59sZhoDz9ZUw6Um+1lUCgWpJw5/TTMn5w==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^4.0.0
@@ -114,11 +126,22 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@noble/ed25519@2.3.0':
+    resolution: {integrity: sha512-M7dvXL2B92/M7dw9+gzuydL8qn/jiqNHaoR3Q+cb1q1GHV7uwE17WCyFMG+Y+TZb5izcaXk5TdJRrDUxHXL78A==}
+
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  ansi-colors@4.1.3:
+    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
+    engines: {node: '>=6'}
+
+  ansi-regex@5.0.1:
+    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
+    engines: {node: '>=8'}
 
   arrify@1.0.1:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
@@ -143,6 +166,10 @@ packages:
   decamelize@5.0.1:
     resolution: {integrity: sha512-VfxadyCECXgQlkoEAjeghAr5gY3Hf+IKjKb+X8tGVDtveCjN+USwprd2q3QXBR9T1+x2DG0XZF5/w+7HAtSaXA==}
     engines: {node: '>=10'}
+
+  enquirer@2.4.1:
+    resolution: {integrity: sha512-rRqJg/6gd538VHvR3PSrdRBb/1Vy2YfzHqzvbhGIQpDRKIa4FgV/54b5Q1xYSxOOwKvjXweS26E0Q+nAMwp2pQ==}
+    engines: {node: '>=8.6'}
 
   error-ex@1.3.4:
     resolution: {integrity: sha512-sqQamAnR14VgCr1A618A3sGrygcpK+HEbenA/HiEAkkUwcZIIB/tgWqHFxWgOyDh4nB4JCRimh79dR5Ywc9MDQ==}
@@ -257,6 +284,9 @@ packages:
     resolution: {integrity: sha512-tYkDkVVtYkSVhuQ4zBgfvciymHaeuel+zFKXShfDnFP5SyVEP7qo70Rf1jTOTCx3vGNAbnEi/xFkcfQVMIBWag==}
     engines: {node: '>=12'}
 
+  secret-manager-crypto-utils@0.3.1:
+    resolution: {integrity: sha512-w4usWFH1r4ucR8dZBk81kmBo3ZOouU6a+/fZEaOFaP22icFapbelf1f5M1QwcbZ0AwPDeWfwvq8DfNOr0PAQyg==}
+
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
     engines: {node: '>=10'}
@@ -274,9 +304,19 @@ packages:
   spdx-license-ids@3.0.22:
     resolution: {integrity: sha512-4PRT4nh1EImPbt2jASOKHX7PB7I+e4IWNLvkKFDxNhJlfjbYlleYQh285Z/3mPTHSAK/AvdMmw5BNNuYH8ShgQ==}
 
+  strip-ansi@6.0.1:
+    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
+    engines: {node: '>=8'}
+
   strip-indent@4.1.1:
     resolution: {integrity: sha512-SlyRoSkdh1dYP0PzclLE7r0M9sgbFKKMFXpFRUMNuKhQSbC6VQIGzq3E0qsfvGJaUFJPGv6Ws1NZ/haTAjfbMA==}
     engines: {node: '>=12'}
+
+  thingy-byte-utils@0.0.8:
+    resolution: {integrity: sha512-m9+aSv0XrU1g6Da61Qq0ZnyflSYx1/uWfD98UFziOV4WMrEzE5eHTjXGhxhFRzauL3EkwujZZJbOBxj8PzHyAg==}
+
+  thingy-crypto-node@0.0.2:
+    resolution: {integrity: sha512-wFpB8evuisJbZ/ZZmYEkcvfwJs5Ls16Co4G9wl4AQg4h8jZjN+b0a1Kj+X+2nEDsySp+iTO68xJAznjIpf0J3w==}
 
   trim-newlines@4.1.1:
     resolution: {integrity: sha512-jRKj0n0jXWo6kh62nA5TEh3+4igKDXLvzBJcPpiizP7oOolUrYIxmVBG9TOtHYFHoddUk6YvAkGeGoSVTXfQXQ==}
@@ -305,7 +345,7 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-agent-sdk@0.2.7(zod@4.3.5)':
+  '@anthropic-ai/claude-agent-sdk@0.2.11(zod@4.3.5)':
     dependencies:
       zod: 4.3.5
     optionalDependencies:
@@ -385,9 +425,15 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
+  '@noble/ed25519@2.3.0': {}
+
   '@types/minimist@1.2.5': {}
 
   '@types/normalize-package-data@2.4.4': {}
+
+  ansi-colors@4.1.3: {}
+
+  ansi-regex@5.0.1: {}
 
   arrify@1.0.1: {}
 
@@ -408,6 +454,11 @@ snapshots:
   decamelize@1.2.0: {}
 
   decamelize@5.0.1: {}
+
+  enquirer@2.4.1:
+    dependencies:
+      ansi-colors: 4.1.3
+      strip-ansi: 6.0.1
 
   error-ex@1.3.4:
     dependencies:
@@ -527,6 +578,11 @@ snapshots:
       indent-string: 5.0.0
       strip-indent: 4.1.1
 
+  secret-manager-crypto-utils@0.3.1:
+    dependencies:
+      '@noble/ed25519': 2.3.0
+      thingy-byte-utils: 0.0.8
+
   semver@7.7.3: {}
 
   spdx-correct@3.2.0:
@@ -543,7 +599,17 @@ snapshots:
 
   spdx-license-ids@3.0.22: {}
 
+  strip-ansi@6.0.1:
+    dependencies:
+      ansi-regex: 5.0.1
+
   strip-indent@4.1.1: {}
+
+  thingy-byte-utils@0.0.8: {}
+
+  thingy-crypto-node@0.0.2:
+    dependencies:
+      secret-manager-crypto-utils: 0.3.1
 
   trim-newlines@4.1.1: {}
 
