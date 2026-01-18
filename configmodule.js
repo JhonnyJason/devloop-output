@@ -35,7 +35,7 @@ export var updateConfig = async function(content) {
     callbacks = onChangeListeners[prop];
     for (j = 0, len1 = callbacks.length; j < len1; j++) {
       cb = callbacks[j];
-      cb();
+      cb(content[prop]);
     }
   }
 };

@@ -28,6 +28,11 @@ export var setStateFilePath = function(path) {
 };
 
 //###########################################################
+export var getState = function() {
+  return state;
+};
+
+//###########################################################
 export var readState = async function() {
   var content, err;
   log("readState");
@@ -46,10 +51,8 @@ export var readState = async function() {
   }
   state = defaultState;
   await writeState();
-  return state;
 };
 
-//###########################################################
 export var writeState = async function() {
   var content;
   log("writeState");

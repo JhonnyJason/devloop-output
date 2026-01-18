@@ -94,12 +94,17 @@ export var updateLocalConfig = async function(content, validProps) {
 
 //#############################################################################
 createNewConfig = async function() {
-  var confirmPw, keyFragment, publicKeyHex, pwd, secretKeyHex;
+  var confirmPw, err, keyFragment, publicKeyHex, pwd, secretKeyHex;
   log("createNewConfig");
   console.log(`No config found. Creating new config at ${configPath}`);
-  // Ask if user wants password protection
-  pwd = (await ui.retrieveSecret("New Password:"));
-  confirmPw = (await ui.retrieveSecret("Confirm password:"));
+  try {
+    // Ask if user wants password protection
+    pwd = (await ui.retrieveSecret("New Password:"));
+    confirmPw = (await ui.retrieveSecret("Confirm password:"));
+  } catch (error) {
+    err = error;
+    process.exit(0); // when user cancelled exit application
+  }
   if (pwd !== confirmPw) {
     console.error("Passwords don't match. Try again.");
     return createNewConfig();
@@ -143,7 +148,12 @@ decryptContent = async function(cfg) {
   }
   while (true) {
     try {
-      password = (await ui.retrieveSecret("Password:"));
+      try {
+        password = (await ui.retrieveSecret("Password:"));
+      } catch (error) {
+        err = error;
+        process.exit(0); // when user cancelled exit application
+      }
       secretKeyHex = (await getKey(password, cfg.keyFragment));
       publicKeyHex = (await secUtl.createPublicKey(secretKeyHex));
       cryptoNode = new ThingyCryptoNode({secretKeyHex, publicKeyHex});

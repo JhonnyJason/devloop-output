@@ -17,10 +17,12 @@ import * as statemodule from "./statemodule.js";
 
 import * as taskloopmodule from "./taskloopmodule.js";
 
+import * as tgmodule from "./tgmodule.js";
+
 import * as uimodule from "./uimodule.js";
 
 import * as userconfigurationmodule from "./userconfigurationmodule.js";
 
-Modules = {cliargumentsmodule, configmodule, debugmodule, mainprocessmodule, pathmodule, startupmodule, statemodule, taskloopmodule, uimodule, userconfigurationmodule};
+Modules = {cliargumentsmodule, configmodule, debugmodule, mainprocessmodule, pathmodule, startupmodule, statemodule, taskloopmodule, tgmodule, uimodule, userconfigurationmodule};
 
 export default Modules;

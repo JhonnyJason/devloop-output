@@ -35,8 +35,9 @@ export var retrieveString = async function(prompt) {
     err = error;
     log(err);
   }
-  console.log("User input rejected - Bye!");
-  process.exit(0);
+  console.log("User input cancelled!");
+  // process.exit(0)
+  throw new Error("User cancelled!");
 };
 
 //###########################################################
@@ -56,8 +57,9 @@ export var retrieveSecret = async function(prompt) {
     err = error;
     log(err);
   }
-  console.log("User input rejected - Bye!");
-  process.exit(0);
+  console.log("User input cancelled!");
+  // process.exit(0)
+  throw new Error("User cancelled!");
 };
 
 //###########################################################
@@ -76,8 +78,9 @@ export var retrieveChoice = async function(prompt, choices) {
     err = error;
     log(err);
   }
-  console.log("User input rejected - Bye!");
-  process.exit(0);
+  console.log("User input cancelled!");
+  // process.exit(0)
+  throw new Error("User cancelled!");
 };
 
 //endregion

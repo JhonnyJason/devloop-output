@@ -5,10 +5,12 @@ import {
 } from "thingy-debug";
 
 //###############################################################################
-addModulesToDebug({});
+addModulesToDebug({
+  // cliargumentsmodule: true
+  // configmodule: true
+  // mainprocessmodule: true
+  // startupmodule: true
+  taskloopmodule: true
+});
 
-// cliargumentsmodule: true
-// configmodule: true
-// mainprocessmodule: true
-// startupmodule: true
 // uimodule: true
